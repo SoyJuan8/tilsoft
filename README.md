@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Portafolio Tilsoft
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenido al repositorio del sitio web del portafolio de Tilsoft, una empresa especializada en soluciones tecnológicas innovadoras.
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- **Diseño moderno y responsivo** que se adapta a cualquier dispositivo
+- **Navegación suave** entre secciones
+- **Portafolio interactivo** con filtrado por categorías
+- **Formulario de contacto** funcional
+- **Animaciones** para una mejor experiencia de usuario
+- **Diseño limpio y profesional** con la paleta de colores corporativa
 
-### `npm start`
+## 🎨 Paleta de Colores
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Color primario: `#4E8CAE`
+- Color secundario: `#DCE5EA`
+- Color de acento: `#A4CCD4`
+- Blanco: `#FFFFFF`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologías Utilizadas
 
-### `npm test`
+- React.js
+- React Router para la navegación
+- CSS puro (sin frameworks)
+- Framer Motion para animaciones
+- React Icons para los íconos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Instalación
 
-### `npm run build`
+1. Clona el repositorio:
+   ```bash
+   git clone [URL_DEL_REPOSITORIO]
+   cd tilsoft-portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Abre tu navegador y ve a [http://localhost:3000](http://localhost:3000)
 
-### `npm run eject`
+## 📂 Estructura del Proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── components/          # Componentes de React
+│   ├── About/           # Sección "Sobre Nosotros"
+│   ├── Contact/         # Formulario de contacto
+│   ├── Header/          # Barra de navegación
+│   ├── Home/            # Página de inicio
+│   ├── Portfolio/       # Sección de portafolio
+│   └── Services/        # Sección de servicios
+├── assets/              # Recursos estáticos
+│   └── images/          # Imágenes
+├── styles/              # Estilos globales
+├── App.js               # Componente principal
+└── index.js             # Punto de entrada de la aplicación
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Despliegue
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para desplegar el proyecto en producción, sigue estos pasos:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Crea una versión optimizada:
+   ```bash
+   npm run build
+   ```
 
-## Learn More
+2. La carpeta `build` contendrá los archivos listos para producción que puedes desplegar en cualquier servicio de hosting estático como Netlify, Vercel o GitHub Pages.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📝 Personalización
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Cambiar el logo
 
-### Code Splitting
+1. Reemplaza el archivo `public/logo.png` con tu propio logo.
+2. Asegúrate de que el logo tenga un fondo transparente para una mejor integración.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Actualizar información de contacto
 
-### Analyzing the Bundle Size
+Abre el archivo `src/components/Contact/Contact.js` y actualiza la información de contacto en la sección correspondiente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Modificar proyectos del portafolio
 
-### Making a Progressive Web App
+Los proyectos se encuentran en el archivo `src/components/Portfolio/Portfolio.js`. Puedes agregar, eliminar o modificar los proyectos en el array `projects`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 Licencia
 
-### Advanced Configuration
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más información.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contribuciones
 
-### Deployment
+Las contribuciones son bienvenidas. Siéntete libre de enviar un Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📧 Contacto
 
-### `npm run build` fails to minify
+Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través de:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Email: info@tilsoft.com
+- Teléfono: +57 123 456 7890
+- Dirección: Bogotá, Colombia
