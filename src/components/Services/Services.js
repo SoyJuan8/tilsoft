@@ -118,9 +118,32 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="services-section-subtitle">Lo que ofrecemos</span>
-          <h2>Nuestros Servicios</h2>
-          <p className="services-section-description">Soluciones tecnológicas integrales diseñadas para impulsar tu negocio al siguiente nivel</p>
+          <div className="services-header">
+            <motion.h2
+              className="services-title"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Nuestros Servicios
+            </motion.h2>
+            <motion.span 
+              className="services-subtitle"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              Lo que ofrecemos
+            </motion.span>
+            <motion.p 
+              className="services-description"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              Soluciones tecnológicas integrales diseñadas para impulsar tu negocio al siguiente nivel
+            </motion.p>
+          </div>
         </motion.div>
         
         <motion.div 

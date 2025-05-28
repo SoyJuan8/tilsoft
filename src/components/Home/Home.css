@@ -1,3 +1,6 @@
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 /* Estilos para el componente Home */
 .home {
   --primary-color: #4E8CAE;
@@ -39,6 +42,88 @@
   opacity: 0.2;
 }
 
+/* Dark mode specific styles */
+.home.dark .home-content h1 {
+  background: linear-gradient(90deg, #6BA8C9, #8EC5E3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home.dark .home-content p {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #6BA8C9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home.dark .home-content p:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .home-content h1 {
+    font-size: 3.2rem;
+  }
+  
+  .home-content p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-content {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+  
+  .home-content h1 {
+    font-size: 2.8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .home-content p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  
+  .home-content h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .home-content p {
+    padding: 1.2rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 90%;
+    border-left: 4px solid var(--primary-color);
+    border-bottom: none;
+    display: block;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .home-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 1rem 1.2rem;
+  }
+  
+  .cta-buttons {
+    justify-content: center;
+  }
+}
+
 .home .container {
   display: flex;
   align-items: center;
@@ -61,12 +146,14 @@
   color: var(--dark-color);
   line-height: 1.2;
   font-weight: 800;
-  background: var(--gradient);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
   display: inline-block;
+  letter-spacing: -0.03em;
+  margin-top: 0;
 }
 
 .home-content h1::after {
@@ -80,16 +167,47 @@
   border-radius: 2px;
 }
 
-.home-content p {
-  font-size: 1.25rem;
+.home-content p.home-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
   color: var(--text-color);
-  margin: 2rem 0;
+  margin: 2.5rem 0 3rem;
   line-height: 1.8;
   max-width: 600px;
   position: relative;
-  padding-left: 20px;
-  border-left: 3px solid var(--primary);
-  opacity: 0.9;
+  padding: 1.5rem 2rem;
+  background: rgba(78, 140, 174, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+  font-style: normal;
+  letter-spacing: 0.3px;
+}
+
+/* Original p styles for other paragraphs */
+.home-content p {
+  font-size: 1.35rem;
+  color: var(--text-color);
+  margin: 2.5rem 0 3rem;
+  line-height: 1.8;
+  max-width: 600px;
+  position: relative;
+  padding: 1.5rem 2rem;
+  background: rgba(78, 140, 174, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+  font-style: italic;
+}
+
+.home-content p:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(78, 140, 174, 0.12);
 }
 
 .cta-buttons {
@@ -105,7 +223,7 @@
   justify-content: center;
   padding: 14px 32px;
   background: var(--gradient);
-  color: white;
+  color: primary-color;
   border: none;
   border-radius: 50px;
   font-size: 1rem;

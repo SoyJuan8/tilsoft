@@ -10,7 +10,7 @@ const Home = () => {
       <div className="container">
         <div className="home-content">
           <h1>Soluciones Digitales a Medida</h1>
-          <p>En Tilsoft, transformamos tus ideas en soluciones tecnológicas innovadoras y de alto impacto para tu negocio.</p>
+          <p className="home-description">En Tilsoft, transformamos tus ideas en soluciones tecnológicas innovadoras y de alto impacto para tu negocio.</p>
           <div className="cta-buttons">
             <a href="#contacto" className="btn" onClick={(e) => {
               e.preventDefault();
