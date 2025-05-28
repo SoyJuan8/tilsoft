@@ -88,16 +88,26 @@ const Contact = () => {
       success: false
     });
     
+    console.log('Iniciando envío del formulario...');
+    console.log('Datos del formulario:', formData);
+    
     try {
-      // Using EmailJS to handle form submission
+      // Usando EmailJS para manejar el envío del formulario
+      console.log('Enviando a EmailJS...');
+      console.log('Service ID:', 'tilsoft2025');
+      console.log('Template ID:', 'templateoriana12');
+      
       const result = await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'tilsoft2025',
+        'templateoriana12',
         formRef.current,
-        'YOUR_PUBLIC_KEY'
+        'bEuRr4ka1O-YB0nJy'
       );
       
+      console.log('Respuesta de EmailJS:', result);
+      
       if (result.status === 200) {
+        console.log('Correo enviado exitosamente');
         setFormStatus({ 
           submitting: false, 
           submitted: true, 
@@ -105,7 +115,7 @@ const Contact = () => {
           error: null
         });
         
-        // Reset form
+        // Resetear formulario
         setFormData({
           name: '',
           email: '',
@@ -113,27 +123,29 @@ const Contact = () => {
           message: ''
         });
         
-        // Reset success message after 5 seconds
+        // Ocultar mensaje de éxito después de 5 segundos
         setTimeout(() => {
           setFormStatus(prev => ({ ...prev, submitted: false }));
         }, 5000);
+      } else {
+        console.error('Error en la respuesta de EmailJS:', result);
+        throw new Error('Error en la respuesta del servidor');
       }
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error('Error al enviar el mensaje:', error);
       setFormStatus({ 
         submitting: false, 
         submitted: true, 
         success: false,
-        error: 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.'
+        error: `Error al enviar el mensaje: ${error.message || 'Por favor, inténtalo de nuevo más tarde.'}`
       });
     }
   };
 
   // Contact information
   const contactInfo = [
-    { icon: <FaMapMarkerAlt />, title: 'Ubicación', value: 'Lima, Perú' },
-    { icon: <FaPhone />, title: 'Teléfono', value: '+51 123 456 789' },
-    { icon: <FaEnvelope />, title: 'Email', value: 'contacto@ejemplo.com' },
+    { icon: <FaMapMarkerAlt />, title: 'Ubicación', value: 'Neiva, Colombia' },
+    { icon: <FaEnvelope />, title: 'Email', value: 'tilsoft123@gmail.com' },
   ];
 
   const socialLinks = [

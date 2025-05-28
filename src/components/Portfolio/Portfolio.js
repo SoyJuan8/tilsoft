@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { motion } from 'framer-motion';
-import { FaRocket, FaCode, FaLightbulb } from 'react-icons/fa';
+import { FaRocket, FaCode, FaLightbulb, FaExternalLinkAlt } from 'react-icons/fa';
 import './Portfolio.css';
 
 const Portfolio = () => {
@@ -18,7 +18,46 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="coming-soon-container">
+        <div className="portfolio-grid">
+          {/* Rosaline Bakery Project */}
+          <motion.div 
+            className={`portfolio-item ${darkMode ? 'dark' : ''}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+          >
+            <div className="portfolio-item-content">
+              <div className="portfolio-image">
+                <img 
+                  src={require('../../assets/images/rosaline.png')} 
+                  alt="Rosaline Bakery Website" 
+                  className="project-screenshot"
+                />
+                <div className="project-badge">Sitio Web</div>
+              </div>
+              <div className="project-details rosaline-details">
+                <h3>Rosaline Bakery</h3>
+                <p>Tienda en línea moderna para una panadería artesanal, con catálogo de productos, carrito de compras y sistema de pedidos.</p>
+                <div className="project-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Supabase</span>
+                </div>
+                <a 
+                  href="https://rosalinebakery.me" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  Visitar sitio <FaExternalLinkAlt className="external-icon" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Coming Soon Placeholder */}
           <motion.div 
             className="coming-soon-content"
             initial={{ opacity: 0, y: 30 }}
@@ -47,7 +86,7 @@ const Portfolio = () => {
             <h3 className="coming-soon-title">¡Próximamente!</h3>
             
             <p className="coming-soon-text">
-              Estamos preparando algo increíble para ti. Nuestro portafolio está en construcción y pronto podrás ver nuestros trabajos más recientes. Mientras tanto, no dudes en contactarnos para más información.
+              Estamos preparando algo increíble para ti. Muy pronto podrás ver más de nuestros trabajos aquí.
             </p>
             
             <div className="coming-soon-features">
