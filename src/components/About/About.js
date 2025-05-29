@@ -44,7 +44,7 @@ const About = () => {
           
           <div className="about-image">
             <div className="image-container">
-              <img src={require("../../assets/images/homeimage.jpg")} alt="Equipo de Tilsoft" />
+              <img src={require("../../assets/images/aboutimage.jpg")} alt="Equipo de Tilsoft" />
             </div>
           </div>
         </div>
