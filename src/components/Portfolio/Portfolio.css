@@ -96,29 +96,13 @@
   font-weight: 600;
   margin-bottom: var(--spacing-sm);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   position: relative;
   padding: 0 var(--spacing-md);
 }
 
-.portfolio-section-subtitle::before,
-.portfolio-section-subtitle::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 40px;
-  height: 2px;
-  background: var(--primary-color);
-  transform: translateY(-50%);
-}
 
-.portfolio-section-subtitle::before {
-  left: -20px;
-}
 
-.portfolio-section-subtitle::after {
-  right: -20px;
-}
 
 .portfolio-section-title h2 {
   font-size: 3rem;
